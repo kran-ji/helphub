@@ -135,6 +135,13 @@ dbt/
 app/
 ```
 
+Data folder meanings:
+
+- `raw`: original source files exactly as received, with no cleaning.
+- `bronze`: ingested data stored in a consistent format, usually with minimal processing.
+- `silver`: cleaned and standardized data with duplicates, dates, and required fields checked.
+- `gold`: final app-ready or analytics-ready data used for recommendations, dashboards, or reports.
+
 ### Phase 2: Seed Data
 
 - Create 50-200 realistic volunteer event records.
