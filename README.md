@@ -1,4 +1,4 @@
-# CivicCompass
+# HelpHub
 
 A hackathon-sized data engineering project that matches volunteers with community events using a local lakehouse, dbt transformations, vector search, and a Streamlit demo app.
 
