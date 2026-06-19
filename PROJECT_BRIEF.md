@@ -10,15 +10,72 @@ The project demonstrates a modern data pipeline in a hackathon-friendly form: ba
 
 ### Core Features
 
-- Volunteer preference survey with interests, skills, location, availability, and commitment level.
-- Event catalog ingestion from CSV, JSON, or manually added records.
-- Local data lake using raw and cleaned Parquet files.
-- dbt transformation models for cleaning, standardizing, and validating event data.
-- Vector search over event descriptions and metadata.
-- Top 3 personalized volunteer recommendations.
-- Short AI-generated explanation for why each event matches the user.
-- Simple pipeline dashboard showing records ingested, cleaned, embedded, and recommended.
-- Recommendation logging for future analysis and evaluation.
+#### 1. Volunteer Preference Survey
+
+Collect the information needed to understand what kind of volunteering opportunity fits a volunteer.
+
+Minimum functionality:
+
+- Capture interests or causes the volunteer cares about.
+- Capture skills the volunteer can offer.
+- Capture preferred location or remote/in-person preference.
+- Capture availability and commitment level.
+- Convert the answers into a searchable preference profile.
+
+#### 2. Event Catalog for Organisers
+
+Allow organisers to add volunteer events so their opportunities can be discovered and recommended.
+
+Minimum functionality:
+
+- Support event upload from CSV or JSON.
+- Support manually added event records.
+- Store event title, organiser, description, category, location, date, required skills, commitment level, and remote/in-person mode.
+- Save raw event records into the local data lake.
+
+#### 3. Event Data Cleaning and Validation
+
+Clean organiser-submitted event data so volunteers see accurate and consistent opportunity information.
+
+Minimum functionality:
+
+- Standardize event categories, locations, dates, and text fields.
+- Remove or flag duplicate event records.
+- Validate required fields such as event ID, title, organiser, description, and date.
+- Store cleaned records separately from raw records.
+
+#### 4. Volunteer-to-Event Matching
+
+Recommend relevant events by comparing volunteer preferences with event descriptions and metadata.
+
+Minimum functionality:
+
+- Combine event title, description, category, skills, location, and commitment level into searchable text.
+- Generate embeddings for cleaned event records.
+- Generate an embedding from the volunteer preference profile.
+- Use vector search to return the top 3 matching events.
+
+#### 5. Recommendation Results
+
+Show volunteers a clear set of recommended opportunities so they can decide which events to explore.
+
+Minimum functionality:
+
+- Display the top 3 recommended events.
+- Show title, organiser, date, location, category, required skills, and commitment level.
+- Show a match score or ranking.
+- Provide a short explanation for why each event matches the volunteer.
+
+#### 6. Organiser and Pipeline Visibility
+
+Give organisers and demo viewers basic visibility into whether events are being processed and recommended.
+
+Minimum functionality:
+
+- Show counts for records ingested, cleaned, embedded, and recommended.
+- Log recommendation requests for future analysis.
+- Store pipeline outputs in local Parquet files.
+- Provide a simple dashboard or status panel in the app.
 
 ## 2. The Tech Stack
 
