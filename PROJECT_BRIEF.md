@@ -4,7 +4,7 @@
 
 ### Pitch
 
-HelpHub is a mini data engineering project that matches volunteers with suitable community events. It ingests volunteer event postings and user preference surveys, stores the data in a lightweight local lakehouse, transforms and validates it, then uses semantic search to recommend the best-fit opportunities.
+HelpHub ingests volunteer events and user preferences, cleans the data in a local lakehouse, and uses vector search to recommend the best-fit community opportunities.
 
 The project demonstrates a modern data pipeline in a hackathon-friendly form: batch ingestion, Parquet storage, SQL transformations, data quality checks, vector indexing, and a simple app for personalized recommendations.
 
